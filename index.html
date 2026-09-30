@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PaidPrompt — Invoice Generator with Payment Reminders | Free Invoice Builder + $19 Lifetime Chaser</title>
+<meta name="description" content="Free freelance invoice generator with live totals and print-to-PDF, plus professionally-written escalating overdue invoice reminder email templates on a smart schedule. $19 once — no subscription.">
+<link rel="canonical" href="https://patrickltl.github.io/paidprompt/">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0D9488">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230D9488'/%3E%3Cpath d='M9 20h14M9 15h14M9 10h9' stroke='white' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PaidPrompt">
+<meta property="og:title" content="Invoice Generator with Payment Reminders — get paid without the awkward chase">
+<meta property="og:description" content="Build invoices free. When they go overdue, PaidPrompt writes the 5 escalating reminder emails and schedules them for you. $19 once, lifetime.">
+<meta property="og:url" content="https://patrickltl.github.io/paidprompt/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Invoice Generator with Payment Reminders — PaidPrompt">
+<meta name="twitter:description" content="Free invoice builder + professionally-written overdue payment reminder sequences on an auto schedule. $19 once — no subscription.">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- JSON-LD: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PaidPrompt",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web browser",
+  "url": "https://patrickltl.github.io/paidprompt/",
+  "description": "Free freelance invoice generator with an escalating 5-stage payment reminder email library, auto-generated chase schedule, calendar export and late-fee calculator. One-time $19 lifetime purchase for the full chaser.",
+  "offers": [
+    { "@type": "Offer", "name": "Free invoice builder", "price": "0", "priceCurrency": "USD", "description": "Unlimited invoice builder with live totals, print-to-PDF and saved invoices." },
+    { "@type": "Offer", "name": "Lifetime payment chaser", "price": "19", "priceCurrency": "USD", "description": "Full 5-stage reminder sequence library (friendly to firm), auto schedule from due date, pre-filled mailto links, ICS and CSV export, signature branding." }
+  ]
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Can PaidPrompt auto-send the reminder emails?", "acceptedAnswer": { "@type": "Answer", "text": "No — by design. Version 1 generates the complete, personally-addressed emails and opens them pre-filled in your own email app with one click, so you review and hit send. That means no server holds your email credentials, there is nothing to connect, and every reminder still comes from your real address, which gets better reply rates than automated-looking mail." } },
+    { "@type": "Question", "name": "Is the invoice generator really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The invoice builder is unlimited on the free tier: unlimited invoices and line items, live subtotal, discount, tax and total math, 16 currencies, a professional print-to-PDF invoice, and saved invoices stored in your browser. No account and no credit card." } },
+    { "@type": "Question", "name": "What does the $19 lifetime purchase include?", "acceptedAnswer": { "@type": "Answer", "text": "The full payment chaser: all 5 escalation stages (friendly nudge, gentle follow-up, clear request with late-fee mention, formal final notice, and firm escalation), all 3 writing tones, the auto-generated schedule from your due date, one-click pre-filled mailto links, ICS calendar and CSV exports, and custom email signature branding. One payment, no subscription." } },
+    { "@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": { "@type": "Answer", "text": "Everything — invoices, client details, your signature — stays in your own browser's local storage. PaidPrompt is a static web app with no backend and no accounts, so nothing is uploaded to a server. Clearing your browser data removes it, so export anything you want to keep." } },
+    { "@type": "Question", "name": "How does the payment reminder schedule work?", "acceptedAnswer": { "@type": "Answer", "text": "Enter the invoice due date and PaidPrompt maps the 5 stages onto it: stage 1 the day after the due date, stage 2 at +4 days, stage 3 at +10 days, stage 4 (final notice) at +20 days and stage 5 (escalation) at +35 days. You can add the dates straight to Google Calendar, Outlook or Apple Calendar with the ICS export." } },
+    { "@type": "Question", "name": "Can I change how the reminder emails sound?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — a tone selector rewrites every stage in a friendly, neutral or firm register, so the sequence matches your relationship with the client. Stage 1 in friendly tone reads like a warm nudge between humans; stage 5 in firm tone is a recognisable final demand." } },
+    { "@type": "Question", "name": "Can I charge late fees with this?", "acceptedAnswer": { "@type": "Answer", "text": "There is a late-fee calculator (amount × monthly rate × months overdue), and the stage 3–5 emails mention the fee at the right escalation moment when you set a rate. Late-fee enforceability varies by country and contract, so only charge what your agreed terms allow." } },
+    { "@type": "Question", "name": "How do I get my license key after paying?", "acceptedAnswer": { "@type": "Answer", "text": "After checkout you receive a license key by email. Enter it once — together with the email you paid with — in the unlock dialog, and every feature unlocks in that browser forever. No login, no password to remember." } }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#tool">Skip to the tool</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="PaidPrompt home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 16h14M5 12h14M5 8h8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </span>
+      PaidPrompt
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#tool">Tool</a>
+      <a href="#how">How it works</a>
+      <a href="#guide">Guide</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#tool" class="btn btn-primary btn-sm nav-cta" id="navUnlock" data-open-unlock>Unlock — $19 lifetime</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="heroH1">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Free invoice builder · $19 lifetime payment chaser</span>
+      <h1 id="heroH1">Invoice Generator with <span class="accent">Payment Reminders</span> — get paid without the awkward chase</h1>
+      <p class="lede">Build clean, professional invoices in seconds — free, forever. Then, when an invoice goes overdue, PaidPrompt writes the five escalating reminder emails for you and schedules every send date. No account. No subscription. Your data never leaves your browser.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary btn-lg" data-goto-tool="invoice">Build a free invoice →</button>
+        <button type="button" class="btn btn-secondary btn-lg" data-goto-tool="chaser">Preview the chaser</button>
+      </div>
+      <p class="hero-proof" id="heroGateNote"><strong>Free forever:</strong> unlimited invoices + a sample reminder email. <strong>$19 once</strong> unlocks all 5 escalation stages for life.</p>
+      <div class="stat-row" aria-label="Why chasing matters">
+        <div class="stat"><b>85%+</b><span>of freelancers report being paid late (FreshBooks &amp; Undrtone surveys)</span></div>
+        <div class="stat"><b>5</b><span>escalating stages, written for you — friendly nudge to final demand</span></div>
+        <div class="stat"><b>$0/mo</b><span>no subscription — $19 once, forever, unlike $25+/mo collection suites</span></div>
+      </div>
+    </div>
+
+    <div class="hero-mock" role="img" aria-label="Preview: an overdue invoice next to a pre-written reminder email">
+      <div class="mock-head"><b>Invoice INV-0042</b><span class="mock-tag">6 days overdue</span></div>
+      <div class="mock-row"><span>Brand refresh — phase 2</span><span>$1,850.00</span></div>
+      <div class="mock-row"><span>Consulting (4 hrs)</span><span>$480.00</span></div>
+      <div class="mock-row"><span>Total due</span><span><strong>$2,330.00</strong></span></div>
+      <div class="mock-mail">
+        <b>Stage 1 · send Wed — “Just a friendly nudge — invoice INV-0042 ($2,330.00)”</b>
+        Hi Maya, hope your week is going well! Just a quick heads-up that invoice INV-0042…
+      </div>
+      <div class="mock-mail locked">Stage 4 · FINAL NOTICE: pay by the 28th to avoid… — unlocks with lifetime</div>
+      <div class="mock-mail locked">Stage 5 · FINAL DEMAND: pausing work until… — unlocks with lifetime</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAIN ================= -->
+<section id="pain" class="section-alt" aria-labelledby="painH2">
+  <div class="wrap">
+    <h2 id="painH2">Late payment isn’t a glitch. It’s the default.</h2>
+    <p class="lede">You did the work. The invoice was fine. The client is happy. And the money still isn’t in your account — because nobody enjoys writing “just bumping this to the top of your inbox” for the third time.</p>
+    <div class="pain-stats">
+      <div class="pain-card"><b>85%+</b><p>Freelancer surveys by FreshBooks (and separately Undrtone) have repeatedly found that the large majority of freelancers get paid late — in some survey years, 85% or more.</p></div>
+      <div class="pain-card"><b>~29%</b><p>Industry analyses of small-business invoicing consistently put roughly a quarter to a third of invoices past due at any given time. You are not imagining it.</p></div>
+      <div class="pain-card"><b>$25+/mo</b><p>Collections and AR suites charge subscription pricing built for agencies. Solo freelancers have been left with free invoice tools that stop the moment an invoice goes overdue.</p></div>
+    </div>
+    <p class="source-note">Sources, stated honestly: FreshBooks’ annual self-employed surveys and Undrtone’s freelance payment survey have both reported that a large majority of freelancers experience late payment (figures vary by year and country); the ~29% past-due figure reflects commonly cited small-business AR analyses. We don’t inflate numbers — the point stands without it: chasing payments is normal, awkward, and expensive in unpaid hours.</p>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section id="how" aria-labelledby="howH2">
+  <div class="wrap center">
+    <span class="eyebrow">How it works</span>
+    <h2 id="howH2">Three steps, about two minutes</h2>
+    <div class="grid-3" style="margin-top:34px; text-align:left">
+      <div class="card">
+        <div class="step-num">1</div>
+        <h3>Build the invoice</h3>
+        <p>Add your business and client details, drop in line items, and watch subtotal, discount, tax and total compute live. Pick from 16 currencies. Print to PDF — free, unlimited.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">2</div>
+        <h3>Generate the chase plan</h3>
+        <p>Enter the due date and PaidPrompt instantly lays out 5 escalating reminders: +1, +4, +10, +20 and +35 days. Each one is written for you, with your client’s name, invoice number and amount merged in.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">3</div>
+        <h3>Send from your own inbox</h3>
+        <p>Copy any email in one click or open it pre-filled in your mail app. Add every date to your calendar with one .ics file, and know exactly what to send — and when — without keeping it all in your head.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHASER PREVIEW (blurred) ================= -->
+<section id="preview" class="section-alt" aria-labelledby="previewH2">
+  <div class="wrap center">
+    <span class="eyebrow">The chaser library</span>
+    <h2 id="previewH2">Five professionally-written stages. Friendly → firm.</h2>
+    <p class="lede">Written the way a seasoned freelancer would actually write them — polite enough to keep the relationship, structured enough that clients recognise a paper trail forming.</p>
+    <div class="preview-list" aria-label="The five reminder stages">
+      <div class="preview-item"><span class="pv-day">Due +1 day</span><div class="pv-txt"><b>Stage 1 — Friendly nudge</b><span class="blurred">Subject: Just a friendly nudge — invoice INV-0042 ($2,330.00)</span></div></div>
+      <div class="preview-item"><span class="pv-day">Due +4 days</span><div class="pv-txt"><b>Stage 2 — Gentle follow-up</b><span class="blurred">Subject: Following up on invoice INV-0042 (copy attached)</span></div></div>
+      <div class="preview-item"><span class="pv-day">Due +10 days</span><div class="pv-txt"><b>Stage 3 — Clear request + late-fee mention</b><span class="blurred">Subject: Action needed: invoice INV-0042 is 10 days overdue</span></div></div>
+      <div class="preview-item"><span class="pv-day">Due +20 days</span><div class="pv-txt"><b>Stage 4 — Formal final notice</b><span class="blurred">Subject: FINAL NOTICE: invoice INV-0042 — pay by the 27th to avoid late fee</span></div></div>
+      <div class="preview-item"><span class="pv-day">Due +35 days</span><div class="pv-txt"><b>Stage 5 — Firm escalation / work-pause</b><span class="blurred">Subject: FINAL DEMAND: invoice INV-0042 — 35 days overdue</span></div></div>
+    </div>
+    <p style="margin-top:22px"><a href="#tool" class="btn btn-primary" data-goto-tool="chaser">Generate mine now — free preview of stage 1</a></p>
+  </div>
+</section>
+
+<!-- ================= TOOL ================= -->
+<section id="tool" aria-labelledby="toolH2">
+  <div class="wrap">
+    <h2 id="toolH2" class="center">The tool</h2>
+    <p class="lede center" style="margin:0 auto">Everything runs in your browser. Nothing is uploaded anywhere.</p>
+
+    <div class="center">
+      <div class="tabs" role="tablist" aria-label="Choose a tool">
+        <button class="tab-btn" role="tab" id="tab-invoice" data-tab="invoice" aria-selected="true" aria-controls="panel-invoice">
+          Invoice builder <span class="badge-free">FREE</span>
+        </button>
+        <button class="tab-btn" role="tab" id="tab-chaser" data-tab="chaser" aria-selected="false" aria-controls="panel-chaser" tabindex="-1">
+          Payment chaser <span class="badge-free">$19</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== INVOICE TAB ===== -->
+    <div class="tab-panel" role="tabpanel" id="panel-invoice" data-panel="invoice" aria-labelledby="tab-invoice">
+      <div class="tool-grid">
+        <div class="builder-col">
+          <div class="card">
+            <fieldset>
+              <legend>Your business</legend>
+              <div class="field"><label for="bizName">Business name</label><input type="text" id="bizName" placeholder="Jane Doe Design LLC"></div>
+              <div class="field"><label for="bizAddr">Address / contact <span class="hint">(one item per line)</span></label><textarea id="bizAddr" placeholder="12Maker Lane&#10;London EC1A 1BB&#10;jane@janedoe.design"></textarea></div>
+              <div class="field"><label for="logoUrl">Logo URL <span class="hint">(optional, https://…)</span></label><input type="url" id="logoUrl" placeholder="https://yoursite.com/logo.png"></div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Client</legend>
+              <div class="field-row">
+                <div class="field"><label for="clientName">Client name / company</label><input type="text" id="clientName" placeholder="Acme Inc."></div>
+                <div class="field"><label for="clientEmail">Client email <span class="hint">(for the chaser)</span></label><input type="email" id="clientEmail" placeholder="maya@acme.com"></div>
+              </div>
+              <div class="field"><label for="clientAddr">Client address</label><textarea id="clientAddr" placeholder="100 Market Street&#10;San Francisco, CA 94103"></textarea></div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Invoice details</legend>
+              <div class="field-row-3">
+                <div class="field"><label for="invoiceNumber">Invoice #</label><input type="text" id="invoiceNumber"></div>
+                <div class="field"><label for="issueDate">Issue date</label><input type="date" id="issueDate"></div>
+                <div class="field"><label for="dueDate">Due date</label><input type="date" id="dueDate"></div>
+              </div>
+              <div class="field"><label for="currency">Currency</label><select id="currency"></select></div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Line items</legend>
+              <table class="items-table">
+                <thead><tr><th>Description</th><th style="width:70px">Qty</th><th style="width:100px">Rate</th><th style="width:90px">Amount</th><th></th></tr></thead>
+                <tbody id="itemsTableBody"></tbody>
+              </table>
+              <button type="button" class="btn btn-secondary btn-sm" id="addItemBtn" style="margin-top:8px">+ Add line item</button>
+            </fieldset>
+
+            <fieldset>
+              <legend>Discount &amp; tax</legend>
+              <div class="field-row">
+                <div class="field"><label for="discountPct">Discount %</label><input type="number" id="discountPct" min="0" max="100" step="any" value="0"></div>
+                <div class="field"><label for="taxPct">Tax / VAT %</label><input type="number" id="taxPct" min="0" max="100" step="any" value="0"></div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Notes &amp; payment</legend>
+              <div class="field"><label for="invoiceNotes">Notes <span class="hint">(shown on the invoice)</span></label><textarea id="invoiceNotes" placeholder="Thank you for your business!"></textarea></div>
+              <div class="field"><label for="payInstructions">Payment instructions <span class="hint">(also reused in reminder emails)</span></label><textarea id="payInstructions" placeholder="Bank: Revolut · IBAN GB00… &#10;Or PayPal: jane@janedoe.design"></textarea></div>
+            </fieldset>
+
+            <div class="saved-bar">
+              <button type="button" class="btn btn-primary" id="saveInvoiceBtn">Save invoice</button>
+              <button type="button" class="btn btn-secondary" id="newInvoiceBtn">New invoice</button>
+              <button type="button" class="btn btn-secondary" id="printBtn">Print / Save as PDF</button>
+            </div>
+            <div class="saved-list" id="savedList" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="invoice-panel-col">
+          <div class="paper-wrap">
+            <div class="paper" id="invoicePaper" aria-label="Invoice preview">
+              <div class="pp-head">
+                <div class="pp-biz">
+                  <img id="ppLogo" alt="" style="display:none">
+                  <h2 id="ppBizName">Your Business Name</h2>
+                  <div class="pp-addr" id="ppBizAddr">Your address</div>
+                </div>
+                <div class="pp-invtitle">
+                  <h3>Invoice</h3>
+                  <div class="pp-meta">
+                    <div><b>№</b> <span id="ppInvoiceNumber">INV-0001</span></div>
+                    <div><b>Issued:</b> <span id="ppIssueDate">—</span></div>
+                    <div><b>Due:</b> <span id="ppDueDate">—</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pp-parties">
+                <div><h4>Bill to</h4><div class="val" id="ppClientName">Client name</div><div class="addr" id="ppClientAddr"></div><div class="addr" id="ppClientEmailLine"></div></div>
+                <div><h4>Amount due</h4><div class="val" id="ppTotalDue" style="font-size:1.3rem"></div></div>
+              </div>
+              <table class="pp-items">
+                <thead><tr><th>Description</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Amount</th></tr></thead>
+                <tbody id="ppItemsBody"></tbody>
+              </table>
+              <div class="pp-totals">
+                <div class="trow"><span>Subtotal</span><span id="ppSubtotal">—</span></div>
+                <div class="trow" id="ppDiscountRow" style="display:none"><span>Discount</span><span id="ppDiscount">—</span></div>
+                <div class="trow" id="ppTaxRow" style="display:none"><span>Tax</span><span id="ppTax">—</span></div>
+                <div class="trow grand"><span>Total due</span><span id="ppTotal">—</span></div>
+              </div>
+              <div class="pp-notes" id="ppNotesBlock" style="display:none">
+                <b>Payment instructions</b>
+                <div id="ppPayInstructions"></div>
+                <div style="margin-top:10px" id="ppNotes"></div>
+              </div>
+              <div class="pp-foot">Generated with PaidPrompt — patrickltl.github.io/paidprompt</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CHASER TAB ===== -->
+    <div class="tab-panel" role="tabpanel" id="panel-chaser" data-panel="chaser" aria-labelledby="tab-chaser" hidden>
+      <div class="chaser-grid">
+        <div class="chaser-form-card">
+          <div class="card">
+            <h3 style="margin-bottom:14px">Invoice to chase</h3>
+            <div class="field-row">
+              <div class="field"><label for="chInvoiceNumber">Invoice #</label><input type="text" id="chInvoiceNumber" placeholder="INV-0042"></div>
+              <div class="field"><label for="chAmount">Amount due</label><input type="number" id="chAmount" min="0" step="any" placeholder="2330.00" inputmode="decimal"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="chCurrency">Currency</label>
+                <select id="chCurrency">
+                  <option value="USD">USD ($)</option><option value="EUR">EUR (€)</option><option value="GBP">GBP (£)</option>
+                  <option value="CAD">CAD</option><option value="AUD">AUD</option><option value="INR">INR (₹)</option>
+                </select>
+              </div>
+              <div class="field"><label for="chDueDate">Due date</label><input type="date" id="chDueDate"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="chClientFirst">Client first name</label><input type="text" id="chClientFirst" placeholder="Maya"></div>
+              <div class="field"><label for="chClientEmail">Client email <span class="hint">(for mailto)</span></label><input type="email" id="chClientEmail" placeholder="maya@acme.com"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="chFreelancer">Your name</label><input type="text" id="chFreelancer" placeholder="Jane"></div>
+              <div class="field"><label for="chBusiness">Business (optional)</label><input type="text" id="chBusiness" placeholder="Jane Doe Design"></div>
+            </div>
+            <div class="field"><label for="chPayInfo">Payment instructions <span class="hint">(merged into emails)</span></label><textarea id="chPayInfo" placeholder="IBAN GB00… or PayPal jane@…"></textarea></div>
+            <div class="field"><label for="chLateFeeRate">Late fee rate <span class="hint">(% per month, 0 = off; mentioned in stages 3–5)</span></label><input type="number" id="chLateFeeRate" min="0" step="any" value="1.5"></div>
+
+            <div class="field">
+              <label>Tone <span class="hint">— rewrites every stage</span></label>
+              <div class="tone-picker" role="radiogroup" aria-label="Email tone">
+                <input type="radio" name="tone" id="toneFriendly" value="friendly"><label for="toneFriendly">Friendly</label>
+                <input type="radio" name="tone" id="toneNeutral" value="neutral" checked><label for="toneNeutral">Neutral</label>
+                <input type="radio" name="tone" id="toneFirm" value="firm"><label for="toneFirm">Firm</label>
+              </div>
+            </div>
+
+            <div class="field"><label for="chSignature">Your email signature <span class="hint">(appended to every email)</span></label><textarea id="chSignature" placeholder="Jane Doe&#10;Jane Doe Design · janedoe.design"></textarea></div>
+
+            <button type="button" class="btn btn-primary btn-block" id="generateBtn">Generate 5-stage sequence</button>
+            <button type="button" class="btn btn-ghost btn-sm btn-block" id="chFromInvoice" style="margin-top:8px">↑ Pull details from my invoice above</button>
+
+            <div class="latefee-box">
+              <h4>Late-fee calculator <span class="hint">(amount × rate × months)</span></h4>
+              <div class="field"><label for="lfMonths">Months overdue</label><input type="number" id="lfMonths" min="0" step="1" value="1"></div>
+              <div id="lateFeeResult" aria-live="polite" style="font-size:.92rem">Fill the invoice details above to see the fee.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chaser-col">
+          <div class="seq-toolbar" id="seqToolbar" style="display:none">
+            <strong style="font-size:.95rem">Your chase plan</strong>
+            <span class="spacer"></span>
+            <button type="button" class="btn btn-sm btn-secondary" id="icsBtn">📅 Add to calendar (.ics)</button>
+            <button type="button" class="btn btn-sm btn-secondary" id="csvBtn">⬇ Schedule (.csv)</button>
+            <button type="button" class="btn btn-sm btn-secondary" id="printScheduleBtn">🖨 Print plan</button>
+          </div>
+
+          <div id="stageList" aria-live="polite"></div>
+
+          <div class="upsell-card" id="upsellCard">
+            <h3>Never chase awkwardly again</h3>
+            <span class="price" id="upsellPrice">$19</span><span class="once">once · lifetime · no subscription</span>
+            <ul class="upsell-list">
+              <li>All 5 escalation stages, unlocked — friendly nudge to final demand</li>
+              <li>All 3 tones for every stage</li>
+              <li>One-click pre-filled mailto links</li>
+              <li>.ics calendar + .csv schedule exports</li>
+              <li>Custom email signature branding</li>
+              <li>Late-fee language woven in at the right moments</li>
+            </ul>
+            <a href="#pricing" class="btn btn-primary btn-lg" data-buy>Unlock for $19 — pay once, own it forever</a>
+            <p style="font-size:.78rem; margin:14px 0 0; color:#94A3B8">One-time payment via Stripe. You’ll get a license key by email — enter it once and everything unlocks in this browser forever.</p>
+          </div>
+
+          <div id="scheduleWrap" style="display:none; margin-top:20px">
+            <h3>Payment reminder schedule</h3>
+            <div class="table-wrap">
+              <table class="sched">
+                <thead><tr><th>Send date</th><th>Stage</th><th>Status</th></tr></thead>
+                <tbody id="scheduleBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GUIDE (SEO, 700+ words) ================= -->
+<section id="guide" class="section-alt" aria-labelledby="guideH2">
+  <div class="wrap">
+    <article class="guide">
+      <span class="eyebrow">Field guide</span>
+      <h2 id="guideH2">The freelancer’s guide to overdue invoice reminder emails (with templates)</h2>
+      <p class="lede">Everything below is the working knowledge PaidPrompt automates: what to send, when to send it, and how to escalate without burning the relationship. If you’d rather have the emails written for you, the tool above does it in about thirty seconds.</p>
+
+      <div class="toc"><b>On this page</b>
+        <ol>
+          <li><a href="#g-when">When to send payment reminders</a></li>
+          <li><a href="#g-why">Why freelancers get paid late</a></li>
+          <li><a href="#g-anatomy">Anatomy of a reminder that works</a></li>
+          <li><a href="#g-template">The 5-stage overdue invoice reminder email template</a></li>
+          <li><a href="#g-schedule">Building a payment reminder schedule</a></li>
+          <li><a href="#g-avoid">What to avoid</a></li>
+          <li><a href="#g-fees">Late fees: worth it?</a></li>
+          <li><a href="#g-tools">Why a freelance invoice generator + chaser beats a suite</a></li>
+        </ol>
+      </div>
+
+      <h3 id="g-when">1. When to send payment reminders</h3>
+      <p>Most freelancers wait far too long. The moment an invoice passes its due date, the odds of a quick, drama-free resolution start dropping — the invoice ages, other invoices stack on top of it in your client’s accounting software, and every extra week makes the conversation feel heavier. The working consensus among experienced freelancers is to send the first nudge within 24–48 hours of the due date, while “I completely forgot” is still the most likely explanation. Escalate on a fixed cadence rather than by feel: a gentle follow-up a few days later, a clear request around the ten-day mark, a formal final notice around three weeks, and a firm escalation near five weeks. Fixed dates do two things: they remove the daily “should I chase now?” mental load, and they signal to slow payers that a paper trail is forming.</p>
+
+      <h3 id="g-why">2. Why freelancers get paid late (it’s usually not malice)</h3>
+      <p>The FreshBooks self-employed surveys and Undrtone’s freelance payment research have both found, year after year, that the large majority of freelancers — often 85% or more — experience late payment, and industry analyses of small-business receivables typically find a quarter to a third of invoices past due at any time. In practice the causes are mundane: your invoice landed in a busy inbox, the approval chain needs two people who are on holiday, your contact forgot to forward it to accounts payable, or the client’s own clients haven’t paid them yet. Genuine refusal is the rare case. That matters for tone: your first three reminders should assume an accident, not a crime. The escalating sequence exists precisely because you can’t know which case you’re in until you’ve asked — politely, repeatedly, and on a schedule.</p>
+
+      <h3 id="g-avoid" style="margin-top:1.6em">Wait — first, the anatomy of a reminder that works</h3>
+      <p>Every effective <strong>overdue invoice reminder email template</strong> shares five parts, whatever the tone:</p>
+      <ul>
+        <li><strong>Subject line with the invoice number.</strong> “Invoice INV-0042 — payment due” gets found, forwarded and filed. “Quick question” gets lost.</li>
+        <li><strong>One-sentence context.</strong> Which invoice, what amount, when it was due. Never make the reader reconstruct it.</li>
+        <li><strong>A summary block.</strong> Invoice number, amount, due date, days overdue, and payment details. Accounts-payable people process blocks, not prose.</li>
+        <li><strong>A single, specific ask.</strong> “Reply with the payment date this week” beats “please look into it” every time, because it can be answered in one line.</li>
+        <li><strong>An exit ramp.</strong> Early-stage emails should let a client who already paid ignore you gracefully (“if it’s already on its way, ignore this note”) — that keeps goodwill high when you do need to be firm later.</li>
+      </ul>
+
+      <h3 id="g-template">3. The 5-stage template, stage by stage</h3>
+      <p>This is the escalation ladder PaidPrompt generates automatically — each stage below is written in full by the tool, in your choice of three tones, with every field merged:</p>
+      <table>
+        <thead><tr><th>Stage</th><th>Timing</th><th>Goal</th><th>Tone target</th></tr></thead>
+        <tbody>
+          <tr><td>1 — Friendly nudge</td><td>Due date +1 day</td><td>Catch honest oversight</td><td>Warm, zero pressure, easy out</td></tr>
+          <tr><td>2 — Gentle follow-up</td><td>+4 days</td><td>Re-attach invoice, surface blockers (POs, approvals)</td><td>Helpful, still light</td></tr>
+          <tr><td>3 — Clear request</td><td>+10 days</td><td>Get a dated commitment; mention late-fee terms</td><td>Direct, businesslike</td></tr>
+          <tr><td>4 — Final notice</td><td>+20 days</td><td>Last chance to avoid the late fee; name the pay-by date</td><td>Formal, unambiguous</td></tr>
+          <tr><td>5 — Escalation</td><td>+35 days</td><td>Pause work, state consequences, offer a payment plan</td><td>Firm, final, documented</td></tr>
+        </tbody>
+      </table>
+      <p>Stage 1 opens with the relationship (“hope your week is going well”) and buries the ask in politeness. Stage 2 adds the practical unblocking line — “if a PO number or approval is missing, tell me what you need and I’ll turn it around today” — which resolves a surprising share of late invoices, because often something trivially fixable is the actual blocker. Stage 3 stops hedging: it names the days overdue and asks for a payment date within five business days. Stage 4 is the one most freelancers never send, and it’s the highest-leverage: a dated final notice (“pay by the 27th to avoid the late fee”) converts a vague cloud into a deadline. Stage 5 states consequences plainly — work paused, bookings held, debt referred to collections — while still offering a payment plan, because the goal is getting paid, not revenge.</p>
+
+      <h3 id="g-schedule">4. Building your payment reminder schedule</h3>
+      <p>A <strong>payment reminder schedule</strong> only works if it’s automatic, because chasing by mood means chasing less when you’re busy — exactly when you can afford it least. The mechanic is simple: take the due date, add your offsets (+1, +4, +10, +20, +35 days), and put those five dates somewhere you’ll actually see them. That’s what the chaser tab above does, including the .ics export that drops every send date into Google Calendar, Outlook or Apple Calendar with a two-hour reminder alarm. Batch it: once a week, open the schedule, send whatever stage is due that day in one sitting. Five minutes, once a week, and collections stops being a background hum of guilt.</p>
+
+      <h3 id="g-what-avoid">5. What to avoid</h3>
+      <ul>
+        <li><strong>Apologising for asking.</strong> You delivered work; the money is yours. “Sorry to bother you” teaches clients that chasing is optional.</li>
+        <li><strong>Vague threats.</strong> “We may have to take further action” with no date and no consequence reads as noise. If you name a consequence, name the date it starts.</li>
+        <li><strong>Skipping straight to anger.</strong> A stage-5 email sent on day 3 costs you a client who was merely disorganised.</li>
+        <li><strong>Chasing from a new email thread each time.</strong> Keep subject lines anchored to the invoice number so the whole history is one searchable thread.</li>
+        <li><strong>Letting it hit 90+ days silently.</strong> Statistically, recovery odds fall steeply the longer an invoice ages — the cheap wins are all in the first month.</li>
+      </ul>
+
+      <h3 id="g-fees">6. Late fees: worth it?</h3>
+      <p>A late-fee clause does most of its work before any invoice is late — it changes how your invoice is prioritised. When you use one, mention it exactly once per email and only from stage 3 onward: early threats poison the tone, and late-stage emails need the fee as a concrete, dated consequence. The calculator in the chaser uses the standard small-business convention of a percentage per month on the outstanding amount (1–1.5% is common). One caution, honestly given: enforceability varies by country, state and contract — in many places you can only charge what your agreed terms allow. Charge what your contract supports, and treat the clause as leverage rather than a revenue line.</p>
+
+      <h3 id="g-tools">7. Why a freelance invoice generator plus a chaser beats a $25/month suite</h3>
+      <p>Enterprise AR platforms charge $40–500/month to do what is, at solo scale, a writing problem plus a calendar problem. Collections suites bundle dashboards, CRMs and payment gateways you don’t need, and they bill monthly forever. A freelance invoice generator should be free — invoicing is a commodity — and the scarce part is the uncomfortable part: the chase. That’s the whole bet behind PaidPrompt. The invoice builder is free without limits. The five-stage reminder library, the auto-built schedule, the calendar export and the pre-filled emails are $19, once. Your invoices and client details stay in your browser — nothing is uploaded, there’s no account, and there’s no subscription quietly renewing while you’re not looking.</p>
+      <blockquote>Ready to stop rewriting the same awkward email? <a href="#tool">Generate your 5-stage chase plan above</a> — stage 1 is free, all five are $19 for life.</blockquote>
+    </article>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="pricing" aria-labelledby="pricingH2">
+  <div class="wrap center">
+    <span class="eyebrow">Pricing</span>
+    <h2 id="pricingH2">Free invoices. One small price for never dreading the chase.</h2>
+    <div class="pricing-grid" style="margin-top:36px; text-align:left">
+      <div class="card price-card">
+        <h3>Free</h3>
+        <div class="amount">$0</div>
+        <div class="per">forever · no account needed</div>
+        <ul>
+          <li>Unlimited invoice builder</li>
+          <li>Unlimited line items, 16 currencies</li>
+          <li>Live subtotal / discount / tax / total math</li>
+          <li>Professional print-to-PDF invoice</li>
+          <li>Saved invoices in your browser</li>
+          <li>One sample reminder email</li>
+          <li class="no">Stages 2–5 of the chaser</li>
+          <li class="no">Calendar + CSV export</li>
+        </ul>
+        <button type="button" class="btn btn-secondary btn-block" data-goto-tool="invoice">Start building — it’s free</button>
+      </div>
+      <div class="card price-card featured">
+        <span class="pop-badge">Most freelancers pick this</span>
+        <h3>Lifetime</h3>
+        <div class="amount">$19 <span style="font-size:1rem;font-weight:500;color:var(--muted)">once</span></div>
+        <div class="per">yours forever · no subscription, ever</div>
+        <ul>
+          <li>Everything in Free, plus:</li>
+          <li>All 5 escalation stages — friendly → firm</li>
+          <li>3 writing tones for every stage</li>
+          <li>Auto-generated schedule from any due date</li>
+          <li>One-click pre-filled mailto emails</li>
+          <li>.ics calendar export + .csv schedule export</li>
+          <li>Custom email signature branding</li>
+          <li>Late-fee calculator woven into the copy</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-block" data-buy>Unlock lifetime for $19</a>
+      </div>
+    </div>
+    <p style="margin-top:22px; font-size:.85rem; color:var(--muted)">Secure one-time checkout via Stripe. License key delivered by email — works in your browser forever.</p>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="section-alt" aria-labelledby="faqH2">
+  <div class="wrap" style="max-width:800px">
+    <h2 id="faqH2" class="center">Frequently asked questions</h2>
+    <div style="margin-top:26px">
+      <details class="faq-item"><summary>Can PaidPrompt auto-send the reminder emails?</summary><div class="faq-a">No — by design. Version 1 generates the complete, personally-addressed emails and opens them pre-filled in your own email app with one click, so you review and hit send. That means no server holds your email credentials, there’s nothing to connect, and every reminder still comes from your real address — which gets better reply rates than automated-looking mail.</div></details>
+      <details class="faq-item"><summary>Is the invoice generator really free?</summary><div class="faq-a">Yes. The invoice builder is unlimited on the free tier: unlimited invoices and line items, live subtotal, discount, tax and total math, 16 currencies, a professional print-to-PDF invoice, and saved invoices stored in your browser. No account, no credit card.</div></details>
+      <details class="faq-item"><summary>What does the $19 lifetime purchase include?</summary><div class="faq-a">The full payment chaser: all 5 escalation stages, all 3 writing tones, the auto-generated schedule from your due date, one-click pre-filled mailto links, ICS calendar and CSV exports, and custom email signature branding. One payment — no subscription.</div></details>
+      <details class="faq-item"><summary>Where is my data stored?</summary><div class="faq-a">Everything — invoices, client details, your signature — stays in your own browser’s local storage. PaidPrompt is a static web app with no backend and no accounts, so nothing is uploaded to a server. Clearing your browser data removes it, so export anything you want to keep.</div></details>
+      <details class="faq-item"><summary>How does the payment reminder schedule work?</summary><div class="faq-a">Enter the invoice due date and PaidPrompt maps the 5 stages onto it: +1 day, +4, +10, +20 (final notice) and +35 days. Add every date to Google Calendar, Outlook or Apple Calendar with one .ics file.</div></details>
+      <details class="faq-item"><summary>Can I change how the reminder emails sound?</summary><div class="faq-a">Yes — the tone selector rewrites every stage in a friendly, neutral or firm register. Stage 1 in friendly tone reads like a warm nudge between humans; stage 5 in firm tone is a recognisable final demand.</div></details>
+      <details class="faq-item"><summary>Can I charge late fees with this?</summary><div class="faq-a">There’s a late-fee calculator (amount × monthly rate × months overdue), and stages 3–5 mention the fee at the right escalation moment when you set a rate. Late-fee enforceability varies by country and contract, so only charge what your agreed terms allow.</div></details>
+      <details class="faq-item"><summary>How do I get my license key after paying?</summary><div class="faq-a">After checkout you receive a license key by email. Enter it once — with the email you paid with — in the unlock dialog, and every feature unlocks in that browser forever. No login, no password.</div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 16h14M5 12h14M5 8h8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span> PaidPrompt</a>
+        <p style="max-width:32rem; margin-top:12px; font-size:.92rem">The invoice generator with payment reminders. Free invoices forever; $19 once to never write an awkward chase email again.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#tool">Invoice builder</a>
+        <a href="#tool">Payment chaser</a>
+        <a href="#guide">Reminder guide</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="sitemap.xml" rel="nofollow">Sitemap</a>
+      </div>
+    </div>
+    <div class="privacy-note">
+      🔒 <strong>Your data stays in your browser.</strong> PaidPrompt has no server, no accounts and no tracking: invoices, client details and emails live in your browser’s local storage until you clear them. Exports download straight to your device.
+      <br><br>
+      <small>© <span id="year">2026</span> PaidPrompt. All prices USD. Late-payment statistics referenced from published FreshBooks and Undrtone freelance surveys; figures vary by year and region.</small>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= UNLOCK MODAL ================= -->
+<div class="modal-backdrop" id="unlockModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div id="licForm">
+      <h3 id="modalTitle">Unlock lifetime access</h3>
+      <p style="font-size:.92rem; color:var(--ink-2)">Enter the email you paid with and the license key from your receipt. Keys look like <code>AB12-CD34</code>.</p>
+      <form novalidate>
+        <div class="field"><label for="licEmail">Email used at checkout</label><input type="email" id="licEmail" autocomplete="email" placeholder="you@example.com"></div>
+        <div class="field"><label for="licKey">License key</label><input type="text" id="licKey" placeholder="XXXX-XXXX" autocapitalize="characters" autocomplete="off"></div>
+        <p class="modal-error" id="licError" role="alert"></p>
+        <button type="submit" class="btn btn-primary btn-block">Unlock — <span id="modalPrice">$19</span> lifetime</button>
+        <p style="font-size:.78rem; color:var(--muted); margin-top:12px">Haven’t paid yet? <a href="#pricing" id="modalToPricing">See what $19 includes →</a><br>Evaluating the product? Append <code>?demo=1</code> to the URL for 24-hour access.</p>
+      </form>
+    </div>
+    <div class="modal-success" id="licSuccess" style="display:none">
+      <div class="big-check">✓</div>
+      <h3>You’re in — for life</h3>
+      <p style="font-size:.92rem; color:var(--ink-2)">All 5 stages, every tone, and all exports are unlocked in this browser. Happy chasing — the polite kind.</p>
+      <button type="button" class="btn btn-primary btn-block" id="licDone">Back to my chase plan</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/sequences.js"></script>
+<script src="js/invoice.js"></script>
+<script src="js/app.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
