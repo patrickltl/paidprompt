@@ -2,6 +2,6 @@
 const SITE_CONFIG = {
   brandName: "PaidPrompt",
   stripePaymentLink: "PASTE_YOUR_STRIPE_PAYMENT_LINK_HERE",
-  price: "$19",
+  price: "HK$148",
   demoHours: 24
 };
