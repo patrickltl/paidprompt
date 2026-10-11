@@ -1,7 +1,7 @@
 /* PaidPrompt — site configuration. Owner: edit these values only. */
 const SITE_CONFIG = {
   brandName: "PaidPrompt",
-  stripePaymentLink: "PASTE_YOUR_STRIPE_PAYMENT_LINK_HERE",
+  stripePaymentLink: "https://buy.stripe.com/6oUeVd2cs66u2AnaJq7Vm00",
   price: "HK$148",
   demoHours: 24
 };
